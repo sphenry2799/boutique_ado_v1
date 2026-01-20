@@ -41,9 +41,8 @@ body {
 .btn-outline-black {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid #000000;
+    border: 1px solid black;
 }
-
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
@@ -62,7 +61,7 @@ body {
 }
 
 .text-black {
-    color: #000000 !important;
+    color: #000 !important;
 }
 
 .border-black {
@@ -74,14 +73,13 @@ body {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    /* Use rgba: 255, 255, 255 is white, 0.5 is 50% transparency */
-    background: rgba(255, 255, 255, 1); 
-    z-index: -1; 
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
@@ -101,6 +99,23 @@ a.category-badge > span.badge:hover {
 .update-link,
 .remove-item {
     cursor: pointer;
+}
+
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
 }
 
 

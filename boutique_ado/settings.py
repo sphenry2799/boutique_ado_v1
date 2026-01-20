@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-k369@cv&u3m6#mwb#8&)6h=d74x7iz8653%^bt+)45t5qovilk'
+SECRET_KEY = 'django-insecure-bf_nx7m0sd(kbofoqv1g*ba))$ux)2(ju#mr-kr5#21@5iql_d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    
+
     'home',
     'products',
     'bag',
@@ -71,7 +71,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request', # required by allauth
-                'django.contrib.auth.context_processors.auth',
+                'django.contrib.auth.context_processors.auth', 
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents',
             ],
@@ -79,19 +79,20 @@ TEMPLATES = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
+AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`
     'django.contrib.auth.backends.ModelBackend',
 
-    # `allauth` specific authentication methods, such as login by email
+    # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-
 ]
 
 SITE_ID = 1
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -153,9 +154,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
