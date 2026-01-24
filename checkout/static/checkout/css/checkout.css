@@ -30,6 +30,14 @@
     right: .5rem;
 }
 
+.loading-spinner {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
 #payment-form .form-control,
 #card-element {
     color: #000;
@@ -47,10 +55,3 @@
     z-index: 9999;
 }
 
-.loading-spinner {
-	display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 100%;
-}
